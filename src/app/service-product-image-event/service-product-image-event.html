@@ -1,0 +1,59 @@
+<section class="ex13">
+  <h2>EX13 - Service Product Image</h2>
+  <table>
+    <thead>
+      <tr>
+        <th>Mã SP</th>
+        <th>Tên SP</th>
+        <th>Giá</th>
+        <th>Hình ảnh</th>
+        <th>#</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let p of products">
+        <td>{{ p.ProductId }}</td>
+        <td>{{ p.ProductName }}</td>
+        <td>{{ p.Price }}</td>
+        <td><img [src]="p.Image" [alt]="p.ProductName" /></td>
+        <td><button type="button" (click)="viewDetail(p)">Details</button></td>
+      </tr>
+    </tbody>
+  </table>
+</section>
+
+<section class="ex14">
+  <h2>EX14 - Json Array Model - Product - Catalog</h2>
+  <ng-container *ngFor="let category of categories">
+    <table class="category-info">
+      <tbody>
+        <tr>
+          <td>Ma Danh Muc</td>
+          <td>Ten Danh Muc</td>
+        </tr>
+        <tr>
+          <td>{{ category.Cateid }}</td>
+          <td>{{ category.CateName }}</td>
+        </tr>
+      </tbody>
+    </table>
+    <table class="product-catalog">
+      <thead>
+        <tr>
+          <th>Ma San Pham</th>
+          <th>Ten San Pham</th>
+          <th>Gia San Pham</th>
+          <th>Picture</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let product of category.Products">
+          <td>{{ product.ProductId }}</td>
+          <td>{{ product.ProductName }}</td>
+          <td>{{ product.Price }}</td>
+          <td><img [src]="product.Image" [alt]="product.ProductName" /></td>
+        </tr>
+      </tbody>
+    </table>
+  </ng-container>
+</section>

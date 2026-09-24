@@ -1,0 +1,51 @@
+.ex13,
+.ex14 {
+	margin: 16px auto 28px;
+	max-width: 760px;
+}
+
+h2 {
+	font-size: 18px;
+	margin: 0 0 10px;
+}
+
+table {
+	border-collapse: collapse;
+	width: 100%;
+}
+
+th,
+td {
+	border: 1px solid #999;
+	padding: 5px;
+	text-align: left;
+}
+
+img {
+	display: block;
+	height: 60px;
+	object-fit: contain;
+	width: 60px;
+}
+
+.ex14 table {
+	table-layout: fixed;
+}
+
+.ex14 th,
+.ex14 td {
+	width: 25%;
+}
+
+.ex14 .category-info {
+	margin-top: 10px;
+	width: 50%;
+}
+
+.ex14 .category-info td {
+	width: 50%;
+}
+
+.ex14 .product-catalog {
+	margin-bottom: 10px;
+}

@@ -1,0 +1,11 @@
+<section class="detail" *ngIf="selectedProduct as product" style="margin-top: 16px;">
+  <button type="button" (click)="goBack()">Go Back</button>
+  <div style="margin-top: 12px;">
+    <p><strong>ID:</strong> {{ product.ProductId }}</p>
+    <p><strong>Name:</strong> {{ product.ProductName }}</p>
+    <p><strong>Price:</strong> {{ product.Price }}</p>
+    <img [src]="product.Image" width="150" height="150" style="object-fit: cover;" />
+  </div>
+</section>
+
+<p *ngIf="!selectedProduct">Product not found.</p>
